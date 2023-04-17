@@ -1,19 +1,20 @@
 import { Route, Routes } from "react-router-dom";
 import React, { Suspense } from "react";
-const Home = React.lazy(() => import("pages/Home/Home"));
+const HomePage = React.lazy(() => import("pages/Home/Home"));
+const Layout = React.lazy(() => import("./Layout"))
 
 function App() {
   return (
     // Loading
     <Suspense fallback={<p>Loading...</p>}>
       <Routes>
-        {/* <Layout /> */}
-        <Route path="/" element={""}>
-          <Route index element={<Home />} />
+        <Route path="/" element={ <Layout />}>
+          <Route index element={<HomePage />} />
           <Route path="about" element={""} />
           <Route path="consultations" element={""} />
           <Route path="program-for-parents" element={""} />
           <Route path="articles" element={""}>
+            {/* id article */}
             <Route path="article" element={""} />
           </Route>
         </Route>

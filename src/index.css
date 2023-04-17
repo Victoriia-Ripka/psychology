@@ -2,10 +2,8 @@
 /* bring in normalize.css styles */
 
 @font-face {
-  font-family: 'Lora500';
-  src: local('Lora500'),
-    url('./fonts/Lora/Lora-VariableFont_wght.ttf') format('truetype');
-  font-weight: 500;
+  font-family: 'Lora';
+  src: url('./fonts/Lora/Lora-VariableFont_wght.ttf') format('truetype');
 }
 
 html {
@@ -20,7 +18,7 @@ html {
   box-sizing: inherit;
 }
 
-.link {
+a {
   text-decoration: none;
   font-family: inherit;
   display: inline-block;
@@ -44,9 +42,9 @@ ol {
 }
 
 body {
-  font-family: Lora500;
+  font-family: 'Lora';
   margin: 0;
-  background-color: #fdf7f2;
+  background-color: #DEDCDC;
 }
 
 img {
