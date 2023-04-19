@@ -1,11 +1,10 @@
-import images from "../../images";
+import Hero from "components/Hero/Hero";
 import React from "react";
 
 const HomePage = () => {
   return (
     <>
-      <p>Home</p>
-      <img src={images.hero_x1} alt="Психолог Світлана Ріпка" />
+      <Hero/>
     </>
   );
 };

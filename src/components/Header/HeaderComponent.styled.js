@@ -11,6 +11,7 @@ export const HeaderContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   position: fixed;
+  z-index: 2;
 
   @media ${device.mobileTablet} {
     height: 60px;
