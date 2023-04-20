@@ -3,14 +3,22 @@ import styled from "styled-components";
 export const Section = styled.section`
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-image: url("../../images/png/x1/hero_x1.png");
   background-color: black;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 120px 8px 80px;
+
   flex-grow: 1;
+`;
+
+export const HeroContainer = styled.div`
+    height: 60vh;
+    margin 105px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 `;
 
 export const Title = styled.h1`
@@ -50,8 +58,8 @@ export const Button = styled.button`
 
   color: #ffffff;
 
-  &:hover, 
-  &:focus{
+  &:hover,
+  &:focus {
     background: black;
   }
 `;

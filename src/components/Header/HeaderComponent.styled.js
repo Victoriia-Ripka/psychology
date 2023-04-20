@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { device } from "../../styles/device";
 
 export const HeaderContainer = styled.div`
@@ -7,22 +7,40 @@ export const HeaderContainer = styled.div`
   padding: 12px 8px;
   height: 40px;
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   position: fixed;
   z-index: 2;
 
   @media ${device.mobileTablet} {
-    height: 60px;
+    padding: 12px 22px;
   }
   @media ${device.tablet} {
+    padding: 11px 45px;
     height: 80px;
     align-iems: center;
   }
   @media ${device.laptop} {
-    height: 150px;
+    height: 130px;
     padding: 30px 110px;
+  }
+`;
+
+export const HeaderContent = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @media ${device.mobileTablet} {
+    width: 436px;
+    margin: 0 auto;
+  }
+  @media ${device.tablet} {
+    width: 678px;
+  }
+  @media ${device.laptop} {
+    width: 1064px;
+    height: 100%;
+    
   }
 `;
 
@@ -30,18 +48,22 @@ export const Nav = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: start;
+  width: 540px;
+  @media ${device.laptop} {
+    width: 650px;
+  }
 `;
 
 export const LogoText = styled(Link)`
   font-family: "Lora";
   font-weight: 400;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.3;
   text-decoration: none;
   color: #ffffff;
 
   @media ${device.mobileTablet} {
-    font-size: 16px;
+    font-size: 15px;
   }
   @media ${device.tablet} {
     font-size: 20px;
@@ -58,6 +80,53 @@ export const Navigation = styled.ul`
     display: flex;
     flex-flow: row nowrap;
   }
+
+  @media ${device.laptop} {
+    margin-top: 20px;
+  }
+`;
+
+export const NavItem = styled.li`
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  @media ${device.laptop} {
+    &:not(:last-child) {
+    margin-right: 50px;
+  }
+  }
+`;
+
+export const MenuLink = styled(NavLink)`
+  display: inline-block;
+  position: relative;
+  font-family: "Lora";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.3;
+  color: #ffffff;
+
+  @media ${device.laptop} {
+    font-size: 16px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid white;
+    opacity: 0;
+    transition: 0.5s;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    opacity: 1;
+  }
 `;
 
 export const Button = styled.button`
@@ -69,15 +138,30 @@ export const Button = styled.button`
   font-size: 13px;
   width: 250px;
   height: 30px;
+  cursor: pointer;
+
+  transition: .5s;
+
+  &:hover,
+  &:focus {
+    background: white;
+    color: #594d46;
+    font-weight: 700;
+  }
 
   @media ${device.preTablet} {
     display: none;
   }
 
+  @media ${device.tablet} {
+    font-size: 13px;
+    width: 130px;
+    height: 40px;
+  }
+
   @media ${device.laptop} {
     font-size: 16px;
     width: 300px;
-    height: 40px;
   }
 `;
 

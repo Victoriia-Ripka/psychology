@@ -1,12 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 import {
   HeaderContainer,
   LogoText,
-//   BurgerMenu,
+  //   BurgerMenu,
   Navigation,
   Button,
   Nav,
+  HeaderContent,
+  NavItem,
+  MenuLink,
 } from "./HeaderComponent.styled";
 import Burger from "./Burger";
 
@@ -21,18 +24,22 @@ const HeaderComponent = () => {
 
   return (
     <HeaderContainer>
-      <Nav>
-        <LogoText to="/">Психолог Світлана Ріпка</LogoText>
-        <Navigation>
-          {navigationItems.map((item, index) => (
-            <li key={index}>
-              <Link to={Object.values(item)}>{Object.keys(item)}</Link>
-            </li>
-          ))}
-        </Navigation>
-      </Nav>
-      <Button>записатися на консультацію</Button>
-      <Burger/>
+      <HeaderContent>
+        <Nav>
+          <LogoText to="/">Психолог Світлана Ріпка</LogoText>
+          <Navigation>
+            {navigationItems.map((item, index) => (
+              <NavItem key={index}>
+                <MenuLink to={Object.values(item)}>{Object.keys(item)}</MenuLink>
+              </NavItem>
+            ))}
+          </Navigation>
+        </Nav>
+        <Button>записатися на консультацію</Button>
+        <div>
+          <Burger />
+        </div>
+      </HeaderContent>
     </HeaderContainer>
   );
 };
