@@ -1,10 +1,22 @@
 import styled from "styled-components";
 import background from "../../images/png/x1/hero_x1.png";
+import { device } from "styles/device";
+
+export const ExtraDiv = styled.div`
+  height: 40px;
+  @media ${device.tablet} {
+    height: 80px;
+  }
+  @media ${device.laptop} {
+    height: 130px;
+  }
+`;
 
 export const Section = styled.div`
-  position: relative;
   width: 100%;
   height: 100%;
+  position: relative;
+  margin: 0 auto;
   background-image: url(${background});
   background-color: black;
   background-size: cover;
@@ -12,6 +24,9 @@ export const Section = styled.div`
   background-position: center;
 
   flex-grow: 1;
+  @media ${device.laptop} {
+    width: 1280px;
+  }
 `;
 
 export const HeroContainer = styled.div`

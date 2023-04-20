@@ -15,7 +15,7 @@ const HeaderComponent = () => {
   const navigationItems = [
     { головна: "/" },
     { "про мене": "about" },
-    { консултації: "consultations" },
+    { консультації: "consultations" },
     { "програма для батьків": "program-for-parents" },
     { статті: "articles" },
   ];

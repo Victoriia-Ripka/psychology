@@ -90,12 +90,12 @@ export const Navigation = styled.ul`
 
 export const NavItem = styled.li`
   &:not(:last-child) {
-    margin-right: 40px;
+    margin-right: 30px;
   }
 
   @media ${device.laptop} {
     &:not(:last-child) {
-    margin-right: 50px;
+    margin-right: 40px;
   }
   }
 `;
@@ -108,6 +108,7 @@ export const MenuLink = styled(NavLink)`
   font-size: 13px;
   line-height: 1.3;
   color: #ffffff;
+  padding: 5px;
 
   @media ${device.laptop} {
     font-size: 16px;
