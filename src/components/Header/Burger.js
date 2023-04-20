@@ -7,7 +7,7 @@ const StyledBurger = styled.div`
   height: 16px;
   position: fixed;
   top: 12px;
-  right: 36px;
+  right: 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -30,8 +30,13 @@ const StyledBurger = styled.div`
     }
   }
 
+  @media ${device.mobileTablet} {
+    position: static;
+  }
+
   @media ${device.tablet} {
     display: none;
+    position: absolute;
   }
 `;
 

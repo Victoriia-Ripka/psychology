@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import background from "../../images/png/x1/hero_x1.png";
 
-export const Section = styled.section`
+export const Section = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: url("../../images/png/x1/hero_x1.png");
+  background-image: url(${background});
   background-color: black;
   background-size: cover;
   background-repeat: no-repeat;

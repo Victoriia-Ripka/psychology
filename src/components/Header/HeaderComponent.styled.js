@@ -75,9 +75,11 @@ export const LogoText = styled(Link)`
 
 export const Navigation = styled.ul`
   display: none;
+  position: relative;
 
   @media ${device.tablet} {
     display: flex;
+    position: static;
     flex-flow: row nowrap;
   }
 
@@ -162,11 +164,5 @@ export const Button = styled.button`
   @media ${device.laptop} {
     font-size: 16px;
     width: 300px;
-  }
-`;
-
-export const BurgerMenu = styled.button`
-  @media ${device.tablet} {
-    display: none;
   }
 `;

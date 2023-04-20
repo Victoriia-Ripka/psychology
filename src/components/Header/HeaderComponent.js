@@ -1,9 +1,7 @@
 import React from "react";
-
 import {
   HeaderContainer,
   LogoText,
-  //   BurgerMenu,
   Navigation,
   Button,
   Nav,
@@ -30,15 +28,15 @@ const HeaderComponent = () => {
           <Navigation>
             {navigationItems.map((item, index) => (
               <NavItem key={index}>
-                <MenuLink to={Object.values(item)}>{Object.keys(item)}</MenuLink>
+                <MenuLink to={Object.values(item)}>
+                  {Object.keys(item)}
+                </MenuLink>
               </NavItem>
             ))}
           </Navigation>
         </Nav>
         <Button>записатися на консультацію</Button>
-        <div>
-          <Burger />
-        </div>
+        <Burger />
       </HeaderContent>
     </HeaderContainer>
   );

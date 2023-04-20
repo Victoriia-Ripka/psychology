@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { device } from "styles/device";
 
-export const Container = styled.div`
+export const Container = styled.section`
   width: 100%;
   padding: 15px 8px;
   margin: 0 auto;
