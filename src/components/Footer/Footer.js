@@ -12,7 +12,8 @@ import {
   WorkContainer,
   SocialContainer,
   ContactsContainer,
-  LabelText
+  LabelText,
+  LinkContainer
 } from "./Footer.styled";
 import { Container } from "components/styles.styled";
 
@@ -29,22 +30,22 @@ const Footer = () => {
           <SocialContainer>
             <Text>Підписуйся на мої соціальні мережі</Text>
             <IconContainer>
-              <a
+              <LinkContainer
                 target="_blank"
                 rel="noreferrer"
                 href="https://www.facebook.com/svitlanaripka?locale=pl_PL"
               >
                 <GrFacebook size={30} color="white" />
                 <LabelText>Facebook</LabelText>
-              </a>
-              <a
+              </LinkContainer>
+              <LinkContainer
                 target="_blank"
                 rel="noreferrer"
                 href="https://www.instagram.com/ripkasvitlana/"
               >
                 <BsInstagram size={30} color="white" />
                 <LabelText>Instagram</LabelText>
-              </a>
+              </LinkContainer>
             </IconContainer>
           </SocialContainer>
           <ContactsContainer>

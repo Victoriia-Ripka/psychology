@@ -70,6 +70,11 @@ export const IconContainer = styled.div`
   justify-content: space-evenly;
 `;
 
+export const LinkContainer = styled.a`
+  display: flex;
+  align-items: center;
+`;
+
 export const Text = styled.p`
   font-family: "Lora";
   font-weight: 400;
@@ -93,7 +98,7 @@ export const LabelText = styled.span`
   display: none;
   position: absolute;
   @media ${device.laptop} {
-    display: block;
+    display: inline-block;
     position: static;
     font-family: "Lora";
     font-weight: 400;

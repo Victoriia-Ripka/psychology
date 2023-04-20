@@ -40,7 +40,6 @@ export const HeaderContent = styled.div`
   @media ${device.laptop} {
     width: 1064px;
     height: 100%;
-    
   }
 `;
 
@@ -90,13 +89,13 @@ export const Navigation = styled.ul`
 
 export const NavItem = styled.li`
   &:not(:last-child) {
-    margin-right: 30px;
+    margin-right: 40px;
   }
 
   @media ${device.laptop} {
     &:not(:last-child) {
-    margin-right: 40px;
-  }
+      margin-right: 50px;
+    }
   }
 `;
 
@@ -108,7 +107,6 @@ export const MenuLink = styled(NavLink)`
   font-size: 13px;
   line-height: 1.3;
   color: #ffffff;
-  padding: 5px;
 
   @media ${device.laptop} {
     font-size: 16px;
@@ -143,7 +141,7 @@ export const Button = styled.button`
   height: 30px;
   cursor: pointer;
 
-  transition: .5s;
+  transition: 0.5s;
 
   &:hover,
   &:focus {
