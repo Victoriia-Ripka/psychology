@@ -2,15 +2,7 @@ import styled from "styled-components";
 import background from "../../images/png/x1/hero_x1.png";
 import { device } from "styles/device";
 
-export const ExtraDiv = styled.div`
-  height: 40px;
-  @media ${device.tablet} {
-    height: 80px;
-  }
-  @media ${device.laptop} {
-    height: 130px;
-  }
-`;
+
 
 export const Section = styled.div`
   width: 100%;

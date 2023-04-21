@@ -1,25 +1,28 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const ModalMenu = () => {
-  const navigationItems = [
-    { головна: "/" },
-    { "про мене": "about" },
-    { консултації: "consultations" },
-    { "програма для батьків": "program-for-parents" },
-    { статті: "articles" },
-  ];
   return (
     <div>
       <nav>
         <Link to="/">Психолог Світлана Ріпка</Link>
-        <div>
-          {navigationItems.map((item, index) => (
-            <li key={index}>
-              <Link to={Object.values(item)}>{Object.keys(item)}</Link>
-            </li>
-          ))}
-        </div>
+        <ul>
+          <li>
+            <NavLink to="/">головна</NavLink>
+          </li>
+          <li>
+            <NavLink to="/about">про мене</NavLink>
+          </li>
+          <li>
+            <NavLink to="/consultations">консультації</NavLink>
+          </li>
+          <li>
+            <NavLink to="/program-for-parents">програма для батьків</NavLink>
+          </li>
+          <li>
+            <NavLink to="/articles">статті</NavLink>
+          </li>
+        </ul>
       </nav>
       <button>записатися на консультацію</button>
     </div>

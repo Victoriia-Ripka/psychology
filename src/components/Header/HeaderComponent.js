@@ -8,37 +8,43 @@ import {
   HeaderContent,
   NavItem,
   MenuLink,
+  ExtraDiv,
 } from "./HeaderComponent.styled";
 import Burger from "./Burger";
 
 const HeaderComponent = () => {
-  const navigationItems = [
-    { головна: "/" },
-    { "про мене": "about" },
-    { консультації: "consultations" },
-    { "програма для батьків": "program-for-parents" },
-    { статті: "articles" },
-  ];
-
   return (
-    <HeaderContainer>
-      <HeaderContent>
-        <Nav>
-          <LogoText to="/">Психолог Світлана Ріпка</LogoText>
-          <Navigation>
-            {navigationItems.map((item, index) => (
-              <NavItem key={index}>
-                <MenuLink to={Object.values(item)}>
-                  {Object.keys(item)}
+    <>
+      <HeaderContainer>
+        <HeaderContent>
+          <Nav>
+            <LogoText to="/">Психолог Світлана Ріпка</LogoText>
+            <Navigation>
+              <NavItem>
+                <MenuLink to="/">головна</MenuLink>
+              </NavItem>
+              <NavItem>
+                <MenuLink to="/about">про мене</MenuLink>
+              </NavItem>
+              <NavItem>
+                <MenuLink to="/consultations">консультації</MenuLink>
+              </NavItem>
+              <NavItem>
+                <MenuLink to="/program-for-parents">
+                  програма для батьків
                 </MenuLink>
               </NavItem>
-            ))}
-          </Navigation>
-        </Nav>
-        <Button>записатися на консультацію</Button>
-        <Burger />
-      </HeaderContent>
-    </HeaderContainer>
+              <NavItem>
+                <MenuLink to="/articles">статті</MenuLink>
+              </NavItem>
+            </Navigation>
+          </Nav>
+          <Button>записатися на консультацію</Button>
+          <Burger />
+        </HeaderContent>
+      </HeaderContainer>
+      <ExtraDiv></ExtraDiv>
+    </>
   );
 };
 

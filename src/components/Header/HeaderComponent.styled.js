@@ -165,3 +165,13 @@ export const Button = styled.button`
     width: 300px;
   }
 `;
+
+export const ExtraDiv = styled.div`
+  height: 40px;
+  @media ${device.tablet} {
+    height: 80px;
+  }
+  @media ${device.laptop} {
+    height: 130px;
+  }
+`;

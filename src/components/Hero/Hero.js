@@ -1,12 +1,10 @@
 import React from "react";
-
-import { Section, Title, Text, Button, HeroContainer, ExtraDiv } from "./Hero.styled";
+import { Section, Title, Text, Button, HeroContainer } from "./Hero.styled";
 import { Container } from "components/styles.styled";
 
 const Hero = () => {
   return (
     <>
-      <ExtraDiv></ExtraDiv>
       <Section>
         <Container>
           <HeroContainer>
