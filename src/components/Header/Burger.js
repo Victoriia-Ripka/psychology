@@ -1,32 +1,39 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { device } from "styles/device";
+import ModalMenu from "./ModalMenu";
+// width: 20px;
+//   height: 16px;
 
 const StyledBurger = styled.div`
   width: 20px;
-  height: 16px;
+  height: 20px;
   position: fixed;
   top: 12px;
   right: 12px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  z-index: 3;
+
+  transition: all 0.5s linear;
 
   div {
     width: 20px;
-    height: 2px;
+    height: 1px;
     background-color: white;
-    border-radius: 1px;
+    border-radius: 16px;
+    transform-origin: 1px;
 
     &:nth-child(1) {
-      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
     }
     &:nth-child(2) {
-      transform: ${({ open }) => open ? 'translateX(100%)' : 'translateX(0)'};
-      opacity: ${({ open }) => open ? 0 : 1};
+      transform: ${({ open }) => (open ? "translateX(100%)" : "translateX(0)")};
+      opacity: ${({ open }) => (open ? 0 : 1)};
     }
     &:nth-child(3) {
-      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
   }
 
@@ -41,14 +48,17 @@ const StyledBurger = styled.div`
 `;
 
 const Burger = () => {
-  const [open, setOpen] = useState(null)
+  const [open, setOpen] = useState(null);
 
   return (
-    <StyledBurger open={open} onClick={() => setOpen(!open)}>
-      <div />
-      <div />
-      <div />
-    </StyledBurger>
+    <>
+      <StyledBurger open={open} onClick={() => setOpen(!open)}>
+        <div />
+        <div />
+        <div />
+      </StyledBurger>
+      <ModalMenu open={open} />
+    </>
   );
 };
 

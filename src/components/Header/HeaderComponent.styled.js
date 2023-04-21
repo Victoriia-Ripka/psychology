@@ -5,7 +5,8 @@ import { device } from "../../styles/device";
 export const HeaderContainer = styled.div`
   background: #594d46;
   padding: 12px 8px;
-  height: 40px;
+  height: 44px;
+  display: flex;
   width: 100%;
   position: fixed;
   z-index: 2;
