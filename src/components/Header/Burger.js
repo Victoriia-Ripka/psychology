@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { device } from "styles/device";
+import { device } from "../../styles/device";
 import ModalMenu from "./ModalMenu";
 // width: 20px;
 //   height: 16px;

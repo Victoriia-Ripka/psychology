@@ -7,6 +7,7 @@ import {
   MenuItem,
   MenuLink,
 } from "./ModalMenu.styled";
+import Modal from "../Modal/Modal";
 
 const ModalMenu = ({ open }) => {
   return (
@@ -30,6 +31,7 @@ const ModalMenu = ({ open }) => {
           </MenuItem>
         </MenuList>
         <Button>записатися на консультацію</Button>
+        <Modal/>
       </ContentContainer>
     </MenuContainer>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import { Section, Title, Text, Button, HeroContainer } from "./Hero.styled";
 import { Container } from "components/styles.styled";
+import Modal from "../Modal/Modal";
 
 const Hero = () => {
   return (
@@ -16,6 +17,7 @@ const Hero = () => {
               </Text>
             </div>
             <Button type="button">записатися на онлайн консультацію</Button>
+            <Modal/>
           </HeroContainer>
         </Container>
       </Section>

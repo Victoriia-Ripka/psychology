@@ -11,8 +11,20 @@ import {
   ExtraDiv,
 } from "./HeaderComponent.styled";
 import Burger from "./Burger";
+import Modal from "../Modal/Modal";
+import { useState } from "react";
 
 const HeaderComponent = () => {
+  const [openModal, setOpenModal] = useState(null);
+
+  const handleClick = () => {
+    setOpenModal(!openModal);
+  };
+
+  const closeModal = () => {
+    setOpenModal(!openModal);
+  };
+
   return (
     <>
       <HeaderContainer>
@@ -39,8 +51,11 @@ const HeaderComponent = () => {
               </NavItem>
             </Navigation>
           </Nav>
-          <Button>записатися на консультацію</Button>
+          <Button type="button" onClick={handleClick}>
+            записатися на консультацію
+          </Button>
           <Burger />
+          <Modal open={openModal} onClose={closeModal} />
         </HeaderContent>
       </HeaderContainer>
       <ExtraDiv></ExtraDiv>
