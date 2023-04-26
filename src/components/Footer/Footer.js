@@ -15,7 +15,7 @@ import {
   LabelText,
   LinkContainer
 } from "./Footer.styled";
-import { Container } from "components/styles.styled";
+import { Container } from "../styles.styled";
 
 const Footer = () => {
   return (

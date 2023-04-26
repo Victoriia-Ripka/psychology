@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "components/styles.styled";
+import { Container } from "../styles.styled";
 import {
   GreetingContainer,
   TextContainer,

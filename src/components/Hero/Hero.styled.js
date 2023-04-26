@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import background from "../../images/png/x1/hero_x1.png";
-import { device } from "styles/device";
-
-
+import { device } from "../../styles/device";
 
 export const Section = styled.div`
   width: 100%;

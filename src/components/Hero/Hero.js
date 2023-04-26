@@ -1,6 +1,6 @@
 import React from "react";
 import { Section, Title, Text, Button, HeroContainer } from "./Hero.styled";
-import { Container } from "components/styles.styled";
+import { Container } from "../styles.styled";
 import Modal from "../Modal/Modal";
 
 const Hero = () => {
