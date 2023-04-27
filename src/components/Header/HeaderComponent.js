@@ -15,13 +15,9 @@ import Modal from "../Modal/Modal";
 import { useState } from "react";
 
 const HeaderComponent = () => {
-  const [openModal, setOpenModal] = useState(null);
+  const [openModal, setOpenModal] = useState(false);
 
   const handleClick = () => {
-    setOpenModal(!openModal);
-  };
-
-  const closeModal = () => {
     setOpenModal(!openModal);
   };
 
@@ -55,7 +51,7 @@ const HeaderComponent = () => {
             записатися на консультацію
           </Button>
           <Burger />
-          <Modal open={openModal} onClose={closeModal} />
+          <Modal open={openModal} setOpenModal={setOpenModal} />
         </HeaderContent>
       </HeaderContainer>
       <ExtraDiv></ExtraDiv>

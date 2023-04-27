@@ -1,23 +1,37 @@
-import React from "react";
-import { Section, Title, Text, Button, HeroContainer } from "./Hero.styled";
-import { Container } from "../styles.styled";
+import React, { useState } from "react";
+import {
+  Section,
+  TextContainer,
+  Title,
+  Text,
+  Button,
+  HeroContainer,
+  Container,
+} from "./Hero.styled";
 import Modal from "../Modal/Modal";
 
 const Hero = () => {
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleClick = () => {
+    setOpenModal(!openModal);
+  };
   return (
     <>
       <Section>
         <Container>
           <HeroContainer>
-            <div>
+            <TextContainer>
               <Title>Психологічна допомога у складні періоди життя</Title>
               <Text>
                 Зробіть перший крок до внутрішнього спокою, задоволення від
                 життя та щасливих стосунків
               </Text>
-            </div>
-            <Button type="button">записатися на онлайн консультацію</Button>
-            <Modal/>
+            </TextContainer>
+            <Button type="button" onClick={handleClick}>
+              записатися на онлайн консультацію
+            </Button>
+            <Modal open={openModal} setOpenModal={setOpenModal} />
           </HeroContainer>
         </Container>
       </Section>

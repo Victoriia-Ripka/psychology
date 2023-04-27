@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { SiViber } from "react-icons/si";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaFacebookMessenger, FaTelegramPlane } from "react-icons/fa";
+import { RxCrossCircled } from "react-icons/rx";
 import {
   Backdrop,
   ModalDiv,
@@ -9,30 +10,35 @@ import {
   IconContainer,
   IconItem,
   IconLink,
+  CloseButton,
 } from "./Modal.styled";
 
-const Modal = ({ open, onClose }) => {
+const Modal = ({ open, setOpenModal }) => {
   useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
-
     return () => window.removeEventListener("keydown", handleKeyDown);
   });
 
+  const close = (open) => setOpenModal(!open);
+
   const handleKeyDown = (e) => {
-    if (e.code === "Escape") {
-      onClose();
+    if (e.key === "Escape") {
+      close(open);
     }
   };
 
   const handleBackdropClick = (e) => {
     if (e.target === e.currentTarget) {
-      onClose();
+      close(open);
     }
   };
 
   return (
     <Backdrop onClick={handleBackdropClick} open={open}>
       <ModalDiv>
+        <CloseButton>
+          <RxCrossCircled size={20} />
+        </CloseButton>
         <ModalTitle>Запис на консультацію</ModalTitle>
         <IconContainer>
           <IconItem>
@@ -41,7 +47,7 @@ const Modal = ({ open, onClose }) => {
               rel="noreferrer"
               href="https://www.facebook.com/messages/t/1517515381886407?locale=pl_PL"
             >
-              <FaFacebookMessenger size={50} color="black" />
+              <FaFacebookMessenger size={50} color="inherit" />
             </IconLink>
           </IconItem>
           <IconItem>
@@ -50,7 +56,7 @@ const Modal = ({ open, onClose }) => {
               rel="noreferrer"
               href="viber://add?number=380970718651"
             >
-              <SiViber size={50} color="black" />
+              <SiViber size={50} color="inherit" />
             </IconLink>
           </IconItem>
           <IconItem>
@@ -59,7 +65,7 @@ const Modal = ({ open, onClose }) => {
               rel="noreferrer"
               href="https://wa.me/qr/DUSCHTMNKN5VN1"
             >
-              <IoLogoWhatsapp size={50} color="black" />
+              <IoLogoWhatsapp size={50} color="inherit" />
             </IconLink>
           </IconItem>
           <IconItem>
@@ -68,7 +74,7 @@ const Modal = ({ open, onClose }) => {
               rel="noreferrer"
               href="https:///t.me/SvitlanaRipka"
             >
-              <FaTelegramPlane size={50} color="black" />
+              <FaTelegramPlane size={50} color="inherit" />
             </IconLink>
           </IconItem>
         </IconContainer>

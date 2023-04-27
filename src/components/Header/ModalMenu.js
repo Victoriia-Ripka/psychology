@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   MenuContainer,
   ContentContainer,
@@ -10,6 +10,12 @@ import {
 import Modal from "../Modal/Modal";
 
 const ModalMenu = ({ open }) => {
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleClick = () => {
+    setOpenModal(!openModal);
+  };
+
   return (
     <MenuContainer open={open}>
       <ContentContainer>
@@ -30,8 +36,8 @@ const ModalMenu = ({ open }) => {
             <MenuLink to="/articles">статті</MenuLink>
           </MenuItem>
         </MenuList>
-        <Button>записатися на консультацію</Button>
-        <Modal/>
+        <Button type="button" onClick={handleClick}>записатися на консультацію</Button>
+        <Modal open={openModal} setOpenModal={setOpenModal} />
       </ContentContainer>
     </MenuContainer>
   );

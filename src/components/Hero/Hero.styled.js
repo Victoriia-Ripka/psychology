@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import background from "../../images/png/x1/hero_x1.png";
+import background_phone from "../../images/images/mobile/hero_x1.jpg";
+import background_tablet from "../../images/images/tablet/hero_x1.jpg";
+import background_laptop from "../../images/images/laptop/hero_x1.jpg";
 import { device } from "../../styles/device";
 
 export const Section = styled.div`
@@ -7,24 +9,80 @@ export const Section = styled.div`
   height: 100%;
   position: relative;
   margin: 0 auto;
-  background-image: url(${background});
+  background-image: url(${background_phone});
   background-color: black;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 
   flex-grow: 1;
+  @media ${device.mobileTablet} {
+    width: 480px;
+  }
+
+  @media ${device.tablet} {
+    width: auto;
+    height: 480px;
+    background-image: url(${background_tablet});
+  }
+
   @media ${device.laptop} {
-    width: 1280px;
+    width: 1100px;
+    height: 100%;
+    background-image: url(${background_laptop});
+  }
+`;
+
+export const Container = styled.section`
+  width: 100%;
+  padding: 120px 8px;
+  margin: 0 auto;
+
+  @media ${device.mobileTablet} {
+    padding: 120px 22px;
+  }
+
+  @media ${device.tablet} {
+    padding: 100px 60px;
+    height: 100%;
+  }
+
+  @media ${device.laptop} {
+    padding: 100px 108px;
   }
 `;
 
 export const HeroContainer = styled.div`
-    height: 60vh;
-    margin 105px 0;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media ${device.tablet} {
+    width: 490px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+
+  @media ${device.laptop} {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 370px;
+  }
+`;
+
+export const TextContainer = styled.div`
+  @media ${device.tablet} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
+    height: 100%;
+  }
 `;
 
 export const Title = styled.h1`
@@ -32,19 +90,46 @@ export const Title = styled.h1`
   font-weight: 500;
   font-size: 16px;
   width: 240px;
-  line-height: 20px;
+  line-height: 1.3;
   color: #d9d9d9;
+
+  @media ${device.tablet} {
+    width: 490px;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  @media ${device.laptop} {
+    width: 700px;
+    font-size: 50px;
+  }
 `;
 
 export const Text = styled.p`
   font-family: "Lora";
   font-weight: 400;
   font-size: 12px;
-  line-height: 15px;
+  line-height: 1.3;
   margin-top: 20px;
   width: 170px;
 
   color: #ffffff;
+
+  @media ${device.tablet} {
+    font-size: 20px;
+    text-align: center;
+    width: 330px;
+  }
+
+  @media ${device.tablet} {
+    font-size: 22px;
+    width: 550px;
+  }
+
+  @media ${device.laptop} {
+    font-size: 24px;
+    width: 550px;
+  }
 `;
 
 export const Button = styled.button`
@@ -63,9 +148,24 @@ export const Button = styled.button`
   text-align: center;
 
   color: #ffffff;
+  transition: 0.5s;
 
   &:hover,
   &:focus {
-    background: black;
+    background: white;
+    color: #594d46;
+    font-weight: 700;
+  }
+
+  @media ${device.tablet} {
+    width: 284px;
+    height: 60px;
+    position: absolute;
+    top: 210px;
+  }
+
+  @media ${device.laptop} {
+    width: 475px;
+    top: 310px;
   }
 `;
