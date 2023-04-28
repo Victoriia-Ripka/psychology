@@ -5,6 +5,7 @@ import {
   TextContainer,
   ImgContainer,
   Text,
+  Img
 } from "./Greeting.styled";
 import image from "../../images/png/x1/greeting_x1.png"
 
@@ -13,7 +14,7 @@ const Greeting = () => {
     <Container>
       <GreetingContainer>
         <ImgContainer>
-          <img
+          <Img
             src={image}
             alt="white flowers and notes"
           />

@@ -1,14 +1,14 @@
 import { Route, Routes } from "react-router-dom";
 import React, { Suspense } from "react";
-const HomePage = React.lazy(() => import("../pages/Home/Home"));
-const AboutPage = React.lazy(() => import("../pages/About/About"));
+const HomePage = React.lazy(() => import("./Home/Home"));
+const AboutPage = React.lazy(() => import("./About/About"));
 const ConsultationsPage = React.lazy(() =>
-  import("../pages/Consultations/Consultation")
+  import("./Consultations/Consultation")
 );
-const ProgramPage = React.lazy(() => import("../pages/Program/Program"));
-const ArticlesPage = React.lazy(() => import("../pages/Articles/Articles"));
-const NotFoundPage = React.lazy(() => import("../pages/NotFound/NotFound"));
-const Layout = React.lazy(() => import("./Layout"));
+const ProgramPage = React.lazy(() => import("./Program/Program"));
+const ArticlesPage = React.lazy(() => import("./Articles/Articles"));
+const NotFoundPage = React.lazy(() => import("./NotFound/NotFound"));
+const Layout = React.lazy(() => import("../components/Layout"));
 
 function App() {
   return (

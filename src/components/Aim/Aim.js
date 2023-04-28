@@ -1,29 +1,30 @@
 import React from "react";
 import { Container } from "../styles.styled";
+import { TextContainer, Title, List, Aims, Text } from "./Aim.styled";
 
 const Aim = () => {
   return (
     <Container>
-      <div>
-        <h2>Моя мета</h2>
-        <ul>
-          <li>відновити ваш психологічний стан</li>
-          <li>
+      <TextContainer>
+        <Title>Моя мета</Title>
+        <List>
+          <Aims>відновити ваш психологічний стан</Aims>
+          <Aims>
             підтримати вас та допомогти подолати кризовий період без негативних
             наслідків
-          </li>
-          <li>вирішити проблему якомога комфортним для вас способом</li>
-          <li>
+          </Aims>
+          <Aims>вирішити проблему якомога комфортним для вас способом</Aims>
+          <Aims>
             допомогти знайти ресурси та розуміння можливостей для майбутнього
             життя
-          </li>
-        </ul>
-      </div>
+          </Aims>
+        </List>
+      </TextContainer>
       <div></div>
-      <p>
+      <Text>
         Загальною метою є збереження та покращення психічного здоров'я
         українців.
-      </p>
+      </Text>
     </Container>
   );
 };

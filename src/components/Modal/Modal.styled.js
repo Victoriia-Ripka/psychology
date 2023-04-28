@@ -97,4 +97,11 @@ export const CloseButton = styled.div`
   position: absolute;
   top: 30px;
   right: 30px;
+  transform: scale(1);
+  transition: 0.3s;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.5);
+  }
 `;

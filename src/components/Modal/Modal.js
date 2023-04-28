@@ -33,10 +33,14 @@ const Modal = ({ open, setOpenModal }) => {
     }
   };
 
+  const handleButton = (e) => {
+    close(open);
+  };
+
   return (
     <Backdrop onClick={handleBackdropClick} open={open}>
       <ModalDiv>
-        <CloseButton>
+        <CloseButton onClick={handleButton}>
           <RxCrossCircled size={20} />
         </CloseButton>
         <ModalTitle>Запис на консультацію</ModalTitle>

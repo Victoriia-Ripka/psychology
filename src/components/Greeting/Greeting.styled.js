@@ -7,10 +7,24 @@ export const GreetingContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
   position: relative;
+  height: 420px;
+
+  @media ${device.mobileTablet} {
+    width: 445px;
+    margin: 0 auto;
+  }
+  @media ${device.tablet} {
+    width: 685px;
+    height: 560px;
+  }
+  @media ${device.laptop} {
+    width: 1070px;
+    height: 640px;
+  }
 `;
 
 export const ImgContainer = styled.div`
-  width: 60%;
+  width: 183px;
   height: 265px;
   background: rgba(166, 155, 146, 0.4);
   display: flex;
@@ -18,17 +32,17 @@ export const ImgContainer = styled.div`
   align-items: center;
 
   @media ${device.mobileTablet} {
-    width: 45%;
+    width: 218px;
     height: 314px;
   }
 
   @media ${device.tablet} {
-    width: 35%;
+    width: 272px;
     height: 392px;
   }
 
   @media ${device.laptop} {
-    width: 35%;
+    width: 450px;
     height: 637px;
   }
 `;
@@ -36,7 +50,6 @@ export const ImgContainer = styled.div`
 export const Img = styled.img`
   display: block;
   width: 147px;
-  
 
   @media ${device.mobileTablet} {
     width: 175px;
@@ -54,18 +67,29 @@ export const TextContainer = styled.div`
   right: -10%;
   width: 185px;
   position: absolute;
-  transform: translateX(-25%);
-  top: -15px;
+  transform: translateX(-50px);
+  top: 0;
+
+  @media screen and (min-width: 380px) {
+    transform: translateX(-65px);
+  }
+
+  @media screen and (min-width: 425px) {
+    transform: translateX(-90px);
+  }
 
   @media ${device.mobileTablet} {
     width: 206px;
     margin-left: 10px;
     position: static;
+    transform: translateX(0);
   }
 
   @media ${device.tablet} {
     width: 365px;
     margin-left: 40px;
+    position: static;
+    
   }
 
   @media ${device.laptop} {
@@ -86,6 +110,7 @@ export const Text = styled.div`
   }
 
   @media ${device.tablet} {
+    width: 365px;
     font-size: 20px;
     line-height: 26px;
     &:not(:last-child) {
@@ -94,10 +119,11 @@ export const Text = styled.div`
   }
 
   @media ${device.laptop} {
+    width: 520px;
     font-size: 24px;
     line-height: 31px;
     &:not(:last-child) {
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
   }
 `;
