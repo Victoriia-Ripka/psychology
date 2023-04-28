@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import {
   MenuContainer,
   ContentContainer,
@@ -8,9 +8,11 @@ import {
   MenuLink,
 } from "./ModalMenu.styled";
 import Modal from "../Modal/Modal";
+import { useLocation } from "react-router-dom";
 
 const ModalMenu = ({ open }) => {
   const [openModal, setOpenModal] = useState(false);
+  const { pathname } = useLocation();
 
   const handleClick = () => {
     setOpenModal(!openModal);
@@ -21,22 +23,46 @@ const ModalMenu = ({ open }) => {
       <ContentContainer>
         <MenuList>
           <MenuItem>
-            <MenuLink to="/">головна</MenuLink>
+            <MenuLink to="/" className={pathname === "/" ? "active" : null}>
+              головна
+            </MenuLink>
           </MenuItem>
           <MenuItem>
-            <MenuLink to="/about">про мене</MenuLink>
+            <MenuLink
+              to="/about"
+              className={pathname === "/about" ? "active" : null}
+            >
+              про мене
+            </MenuLink>
           </MenuItem>
           <MenuItem>
-            <MenuLink to="/consultations">консультації</MenuLink>
+            <MenuLink
+              to="/consultations"
+              className={pathname === "/consultations" ? "active" : null}
+            >
+              консультації
+            </MenuLink>
           </MenuItem>
           <MenuItem>
-            <MenuLink to="/program-for-parents">програма для батьків</MenuLink>
+            <MenuLink
+              to="/program-for-parents"
+              className={pathname === "/program-for-parents" ? "active" : null}
+            >
+              програма для батьків
+            </MenuLink>
           </MenuItem>
           <MenuItem>
-            <MenuLink to="/articles">статті</MenuLink>
+            <MenuLink
+              to="/articles"
+              className={pathname === "/articles" ? "active" : null}
+            >
+              статті
+            </MenuLink>
           </MenuItem>
         </MenuList>
-        <Button type="button" onClick={handleClick}>записатися на консультацію</Button>
+        <Button type="button" onClick={handleClick}>
+          записатися на консультацію
+        </Button>
         <Modal open={openModal} setOpenModal={setOpenModal} />
       </ContentContainer>
     </MenuContainer>

@@ -13,9 +13,12 @@ import {
 import Burger from "./Burger";
 import Modal from "../Modal/Modal";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const HeaderComponent = () => {
   const [openModal, setOpenModal] = useState(false);
+  const { pathname } = useLocation();
+  console.log(pathname);
 
   const handleClick = () => {
     setOpenModal(!openModal);
@@ -29,21 +32,43 @@ const HeaderComponent = () => {
             <LogoText to="/">Психолог Світлана Ріпка</LogoText>
             <Navigation>
               <NavItem>
-                <MenuLink to="/">головна</MenuLink>
+                <MenuLink to="/" className={pathname === "/" ? "active" : null}>
+                  головна
+                </MenuLink>
               </NavItem>
               <NavItem>
-                <MenuLink to="/about">про мене</MenuLink>
+                <MenuLink
+                  to="/about"
+                  className={pathname === "/about" ? "active" : null}
+                >
+                  про мене
+                </MenuLink>
               </NavItem>
               <NavItem>
-                <MenuLink to="/consultations">консультації</MenuLink>
+                <MenuLink
+                  to="/consultations"
+                  className={pathname === "/consultations" ? "active" : null}
+                >
+                  консультації
+                </MenuLink>
               </NavItem>
               <NavItem>
-                <MenuLink to="/program-for-parents">
+                <MenuLink
+                  to="/program-for-parents"
+                  className={
+                    pathname === "/program-for-parents" ? "active" : null
+                  }
+                >
                   програма для батьків
                 </MenuLink>
               </NavItem>
               <NavItem>
-                <MenuLink to="/articles">статті</MenuLink>
+                <MenuLink
+                  to="/articles"
+                  className={pathname === "/articles" ? "active" : null}
+                >
+                  статті
+                </MenuLink>
               </NavItem>
             </Navigation>
           </Nav>

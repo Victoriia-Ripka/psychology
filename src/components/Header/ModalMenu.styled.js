@@ -49,6 +49,9 @@ export const MenuLink = styled(NavLink)`
   line-height: 26px;
 
   color: #ffffff;
+  &.active {
+    font-weight: 900;
+  }
 `;
 
 export const Button = styled.button`

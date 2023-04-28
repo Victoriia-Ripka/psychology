@@ -1,9 +1,31 @@
-import React from 'react'
+import React from "react";
+import { Container } from "../styles.styled";
 
 const Aim = () => {
   return (
-    <div>Aim</div>
-  )
-}
+    <Container>
+      <div>
+        <h2>Моя мета</h2>
+        <ul>
+          <li>відновити ваш психологічний стан</li>
+          <li>
+            підтримати вас та допомогти подолати кризовий період без негативних
+            наслідків
+          </li>
+          <li>вирішити проблему якомога комфортним для вас способом</li>
+          <li>
+            допомогти знайти ресурси та розуміння можливостей для майбутнього
+            життя
+          </li>
+        </ul>
+      </div>
+      <div></div>
+      <p>
+        Загальною метою є збереження та покращення психічного здоров'я
+        українців.
+      </p>
+    </Container>
+  );
+};
 
-export default Aim
+export default Aim;

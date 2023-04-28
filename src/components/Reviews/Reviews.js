@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import { Container } from "../styles.styled";
 
 const Reviews = () => {
   return (
-    <div>Reviews</div>
-  )
-}
+    <Container>
+      <h2>Відгуки моїх клієнтів</h2>
+    </Container>
+  );
+};
 
-export default Reviews
+export default Reviews;

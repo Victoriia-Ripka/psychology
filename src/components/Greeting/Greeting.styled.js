@@ -5,6 +5,8 @@ export const GreetingContainer = styled.div`
   display: flex;
   margin: 15px auto 0;
   align-items: center;
+  justify-content: flex-start;
+  position: relative;
 `;
 
 export const ImgContainer = styled.div`
@@ -32,17 +34,33 @@ export const ImgContainer = styled.div`
 `;
 
 export const Img = styled.img`
-  width: 147.36px;
+  display: block;
+  width: 147px;
+  
+
+  @media ${device.mobileTablet} {
+    width: 175px;
+  }
+  @media ${device.tablet} {
+    width: 220px;
+  }
+
+  @media ${device.laptop} {
+    width: 360px;
+  }
 `;
 
 export const TextContainer = styled.div`
+  right: -10%;
   width: 185px;
-  transform: translateX(-10%);
+  position: absolute;
+  transform: translateX(-25%);
+  top: -15px;
 
   @media ${device.mobileTablet} {
     width: 206px;
-    transform: translateX(0);
     margin-left: 10px;
+    position: static;
   }
 
   @media ${device.tablet} {

@@ -32,14 +32,14 @@ export const HeaderContent = styled.div`
   align-items: flex-end;
 
   @media ${device.mobileTablet} {
-    width: 436px;
+    width: 445px;
     margin: 0 auto;
   }
   @media ${device.tablet} {
-    width: 678px;
+    width: 685px;
   }
   @media ${device.laptop} {
-    width: 1064px;
+    width: 1070px;
     height: 100%;
   }
 `;
@@ -50,7 +50,7 @@ export const Nav = styled.nav`
   justify-content: start;
   width: 540px;
   @media ${device.laptop} {
-    width: 650px;
+    width: 670px;
   }
 `;
 
@@ -81,6 +81,7 @@ export const Navigation = styled.ul`
     display: flex;
     position: static;
     flex-flow: row nowrap;
+    justify-content: space-between;
   }
 
   @media ${device.laptop} {
@@ -128,6 +129,10 @@ export const MenuLink = styled(NavLink)`
   &:hover::after,
   &:focus::after {
     opacity: 1;
+  }
+
+  &.active {
+    font-weight: 900;
   }
 `;
 
