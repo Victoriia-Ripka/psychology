@@ -24,10 +24,11 @@ export const Section = styled.div`
     width: auto;
     height: 480px;
     background-image: url(${background_tablet});
+    max-width: 900px;
   }
 
   @media ${device.laptop} {
-    width: 1100px;
+    max-width: 1100px;
     height: 100%;
     background-image: url(${background_laptop});
   }
