@@ -41,7 +41,7 @@ const Footer = () => {
               <LinkContainer
                 target="_blank"
                 rel="noreferrer"
-                href="https://www.instagram.com/ripkasvitlana/"
+                href="https://www.instagram.com/psycholog_ripka/"
               >
                 <BsInstagram size={30} color="white" />
                 <LabelText>Instagram</LabelText>

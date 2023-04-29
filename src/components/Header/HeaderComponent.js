@@ -18,7 +18,6 @@ import { useLocation } from "react-router-dom";
 const HeaderComponent = () => {
   const [openModal, setOpenModal] = useState(false);
   const { pathname } = useLocation();
-  console.log(pathname);
 
   const handleClick = () => {
     setOpenModal(!openModal);

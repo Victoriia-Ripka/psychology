@@ -1,10 +1,13 @@
 import React from "react";
 import { Container } from "../styles.styled";
+import { ReviewsContainer, Title } from "./Reviews.styled";
 
 const Reviews = () => {
   return (
     <Container>
-      <h2>Відгуки моїх клієнтів</h2>
+      <ReviewsContainer>
+        <Title>Відгуки моїх клієнтів</Title>
+      </ReviewsContainer>
     </Container>
   );
 };

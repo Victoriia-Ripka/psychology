@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { device } from "../../styles/device";
 
 export const GreetingContainer = styled.div`
+  background-color: #dedcdc;
   display: flex;
   margin: 15px auto 0;
   align-items: center;
@@ -20,6 +21,7 @@ export const GreetingContainer = styled.div`
   @media ${device.laptop} {
     width: 1070px;
     height: 640px;
+    margin: 40px auto 0;
   }
 `;
 
@@ -89,7 +91,6 @@ export const TextContainer = styled.div`
     width: 365px;
     margin-left: 40px;
     position: static;
-    
   }
 
   @media ${device.laptop} {
