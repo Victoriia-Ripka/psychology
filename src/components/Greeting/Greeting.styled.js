@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { device } from "../../styles/device";
 
 export const GreetingContainer = styled.div`
-  background-color: #dedcdc;
   display: flex;
   margin: 15px auto 0;
   align-items: center;

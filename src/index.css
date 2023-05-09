@@ -21,7 +21,8 @@ html {
 body {
   font-family: "Lora";
   margin: 0;
-  background-color: #dedcdc;
+  background-color: white;
+  /* background-color: #dedcdc; */
 }
 
 a {

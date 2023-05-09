@@ -3,16 +3,20 @@ import { device } from "../../styles/device";
 
 export const ReviewsContainer = styled.div`
   margin: 0 auto;
-  height: 263px;
+  height: 370px;
 
   @media ${device.mobileTablet} {
-    width: 445px;
+    width: 436px;
+    height: 280px;
   }
+
   @media ${device.tablet} {
     width: 685px;
+    height: 310px;
   }
   @media ${device.laptop} {
     width: 1070px;
+    height: 440px;
   }
 `;
 
@@ -42,32 +46,62 @@ export const Slides = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+
+  @media ${device.mobileTablet} {
+  }
+
+  @media ${device.tablet} {
+    justify-content: space-between;
+  }
 `;
 
 export const NextButton = styled.div`
-  // position: absolute;
-  // top: 50%;
-  // transform: translate(-50%);
-  width: 15.04px;
   height: 25px;
   cursor: pointer;
-`;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #594d46;
+  &:hover,
+  &:focus {
+    color: black;
+    transform: scale(1.3);
+  }
 
-export const PreviousButton = styled.div`
-  // position: absolute;
-  // top: 50%;
-  // transform: translate(-50%);
-  width: 15.04px;
-  height: 25px;
-  cursor: pointer;
+  transition: 0.3s;
+
+  @media ${device.mobileTablet} {
+    transform: scale(1.3);
+    &:hover,
+    &:focus {
+      color: black;
+      transform: scale(1.5);
+    }
+  }
+
+  @media ${device.tablet} {
+    transform: scale(1.5);
+    &:hover,
+    &:focus {
+      color: black;
+      transform: scale(1.8);
+    }
+  }
+
+  @media ${device.laptop} {
+    transform: scale(2);
+    &:hover,
+    &:focus {
+      color: black;
+      transform: scale(2.4);
+    }
+  }
 `;
 
 export const SlideContainer = styled.div`
   display: ${({ active }) => (active ? "block" : "none")};
-  // position: absolute;
-  // left: 50%;
-  // transform: translate(-50%);
 `;
 
 export const Slide = styled.div`
@@ -75,12 +109,25 @@ export const Slide = styled.div`
   border: 1px solid #594d46;
   border-radius: 25px;
   padding: 25px;
-  width: 265px;
+  width: 240px;
+  height: 320px;
+  cursor: pointer;
+
+  @media ${device.mobileTablet} {
+    width: 340px;
+    height: 240px;
+  }
+  @media ${device.tablet} {
+    width: 585px;
+    height: 260px;
+  }
+  @media ${device.laptop} {
+    width: 900px;
+    height: 320px;
+  }
 `;
 
 export const User = styled.div`
-  // display: flex;
-  // align-items: center;
 `;
 
 export const AvatarDiv = styled.div`
@@ -89,44 +136,85 @@ export const AvatarDiv = styled.div`
   border-radius: 50%;
   background: #d9d9d9;
   object-fit: cover;
+
+  @media ${device.mobileTablet} {
+    transform: scale(1.1);
+    // width: 33px;
+  }
+  @media ${device.tablet} {
+    transform: scale(1.7);
+    // width: 51px;
+  }
+  @media ${device.laptop} {
+    transform: scale(3.1);
+    // width: 93px;
+  }
 `;
 
 export const Info = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
 `;
 
 export const UserInfo = styled.div`
   margin-left: 12px;
-  margin-bottom: 5px;
+
+  @media ${device.tablet} {
+    margin-left: 25px;
+  }
+  @media ${device.laptop} {
+    margin-left: 40px;
+  }
 `;
 
 export const Name = styled.p`
   font-family: "Lora";
-  font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 15px;
-
+  line-height: 1.3;
   color: #001a23;
   margin-bottom: 2px;
+
+  @media ${device.tablet} {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  @media ${device.laptop} {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
 `;
 
 export const Country = styled.p`
   font-family: "Lora";
-  font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 15px;
-
+  line-height: 1.3;
   color: #000000;
+
+  @media ${device.tablet} {
+    font-size: 18px;
+  }
+  @media ${device.laptop} {
+    font-size: 24px;
+  }
 `;
 
 export const Review = styled.p`
   font-family: "Lora";
-  font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 15px;
+  line-height: 1.3;
+  margin-top: 10px;
 
   color: #000000;
+
+  @media ${device.tablet} {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  @media ${device.laptop} {
+    font-size: 20px;
+  }
 `;
