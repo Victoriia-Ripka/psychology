@@ -56,7 +56,9 @@ export const Modal = ({ index, open, setOpenModal }) => {
               </IconContext.Provider>
             </AvatarDiv>
             <UserInfo>
-              <Name>{client.name}</Name>
+              <Name>
+                {client.name} {client.age}
+              </Name>
               <Country>{client.country} </Country>
             </UserInfo>
           </Info>

@@ -139,15 +139,12 @@ export const AvatarDiv = styled.div`
 
   @media ${device.mobileTablet} {
     transform: scale(1.1);
-    // width: 33px;
   }
   @media ${device.tablet} {
     transform: scale(1.7);
-    // width: 51px;
   }
   @media ${device.laptop} {
-    transform: scale(3.1);
-    // width: 93px;
+    transform: scale(2.5);
   }
 `;
 
