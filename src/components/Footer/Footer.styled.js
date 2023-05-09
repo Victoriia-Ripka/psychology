@@ -73,6 +73,13 @@ export const IconContainer = styled.div`
 export const LinkContainer = styled.a`
   display: flex;
   align-items: center;
+
+  transition: 0.3s;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.3);
+  }
 `;
 
 export const Text = styled.p`
@@ -91,6 +98,15 @@ export const Text = styled.p`
 
   @media ${device.laptop} {
     font-size: 24px;
+  }
+`;
+
+export const ImgLinkContainer = styled.a`
+  transition: 0.3s;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.3);
   }
 `;
 

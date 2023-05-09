@@ -13,7 +13,8 @@ import {
   SocialContainer,
   ContactsContainer,
   LabelText,
-  LinkContainer
+  LinkContainer,
+  ImgLinkContainer
 } from "./Footer.styled";
 import { Container } from "../styles.styled";
 
@@ -51,34 +52,34 @@ const Footer = () => {
           <ContactsContainer>
             <Text>Контакти</Text>
             <IconContainer>
-              <a
+              <ImgLinkContainer
                 target="_blank"
                 rel="noreferrer"
                 href="https://www.facebook.com/messages/t/1517515381886407?locale=pl_PL"
               >
                 <FaFacebookMessenger size={30} color="white" />
-              </a>
-              <a
+              </ImgLinkContainer>
+              <ImgLinkContainer
                 target="_blank"
                 rel="noreferrer"
                 href="viber://add?number=380970718651"
               >
                 <SiViber size={30} color="white" />
-              </a>
-              <a
+              </ImgLinkContainer>
+              <ImgLinkContainer
                 target="_blank"
                 rel="noreferrer"
                 href="https://wa.me/qr/DUSCHTMNKN5VN1"
               >
                 <IoLogoWhatsapp size={30} color="white" />
-              </a>
-              <a
+              </ImgLinkContainer>
+              <ImgLinkContainer
                 target="_blank"
                 rel="noreferrer"
                 href="https:///t.me/SvitlanaRipka"
               >
                 <FaTelegramPlane size={30} color="white" />
-              </a>
+              </ImgLinkContainer>
             </IconContainer>
           </ContactsContainer>
         </FooterContainer>
