@@ -3,6 +3,7 @@ import { device } from "../../styles/device";
 
 export const ReviewsContainer = styled.div`
   margin: 0 auto;
+  height: 263px;
 
   @media ${device.mobileTablet} {
     width: 445px;
@@ -37,7 +38,37 @@ export const Title = styled.h2`
   }
 `;
 
-export const SlideContainer = styled.div``;
+export const Slides = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const NextButton = styled.div`
+  // position: absolute;
+  // top: 50%;
+  // transform: translate(-50%);
+  width: 15.04px;
+  height: 25px;
+  cursor: pointer;
+`;
+
+export const PreviousButton = styled.div`
+  // position: absolute;
+  // top: 50%;
+  // transform: translate(-50%);
+  width: 15.04px;
+  height: 25px;
+  cursor: pointer;
+`;
+
+export const SlideContainer = styled.div`
+  display: ${({ active }) => (active ? "block" : "none")};
+  // position: absolute;
+  // left: 50%;
+  // transform: translate(-50%);
+`;
 
 export const Slide = styled.div`
   background: #ffffff;
@@ -52,16 +83,16 @@ export const User = styled.div`
   // align-items: center;
 `;
 
-export const Info = styled.div`
-  display: flex;
-`;
-
-export const Img = styled.img`
-  width: 27px;
-  height: 27px;
+export const AvatarDiv = styled.div`
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background: #d9d9d9;
   object-fit: cover;
+`;
+
+export const Info = styled.div`
+  display: flex;
 `;
 
 export const UserInfo = styled.div`
