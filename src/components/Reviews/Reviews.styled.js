@@ -3,16 +3,16 @@ import { device } from "../../styles/device";
 
 export const ReviewsContainer = styled.div`
   margin: 0 auto;
-  height: 370px;
+  height: 390px;
 
   @media ${device.mobileTablet} {
     width: 436px;
-    height: 280px;
+    height: 300px;
   }
 
   @media ${device.tablet} {
     width: 685px;
-    height: 310px;
+    height: 330px;
   }
   @media ${device.laptop} {
     width: 1070px;
@@ -110,16 +110,16 @@ export const Slide = styled.div`
   border-radius: 25px;
   padding: 25px;
   width: 240px;
-  height: 320px;
+  height: 340px;
   cursor: pointer;
 
   @media ${device.mobileTablet} {
     width: 340px;
-    height: 240px;
+    height: 260px;
   }
   @media ${device.tablet} {
     width: 585px;
-    height: 260px;
+    height: 280px;
   }
   @media ${device.laptop} {
     width: 900px;
@@ -127,8 +127,7 @@ export const Slide = styled.div`
   }
 `;
 
-export const User = styled.div`
-`;
+export const User = styled.div``;
 
 export const AvatarDiv = styled.div`
   width: 30px;
@@ -198,12 +197,16 @@ export const Country = styled.p`
   }
 `;
 
-export const Review = styled.p`
+export const Text = styled.p`
   font-family: "Lora";
   font-weight: 400;
   font-size: 12px;
   line-height: 1.3;
   margin-top: 10px;
+
+  &::first-letter {
+    text-transform: capitalize;
+  }
 
   color: #000000;
 
@@ -213,5 +216,24 @@ export const Review = styled.p`
   }
   @media ${device.laptop} {
     font-size: 20px;
+  }
+`;
+
+export const Review = styled.p`
+  font-family: "Lora";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.3;
+  margin-top: 5px;
+
+  color: #000000;
+
+  @media ${device.tablet} {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+  @media ${device.laptop} {
+    font-size: 20px;
+    margin-top: 10px;
   }
 `;

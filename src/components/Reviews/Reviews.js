@@ -12,6 +12,7 @@ import {
   UserInfo,
   Name,
   Country,
+  Text,
   Review,
   NextButton,
 } from "./Reviews.styled";
@@ -74,6 +75,7 @@ const Reviews = () => {
                         <Country>{item.country} </Country>
                       </UserInfo>
                     </Info>
+                    <Text>{item.type}</Text>
                     <Review>{cutText(item.review)}</Review>
                   </User>
                 </Slide>

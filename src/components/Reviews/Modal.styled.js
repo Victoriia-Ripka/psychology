@@ -137,12 +137,16 @@ export const Country = styled.p`
   }
 `;
 
-export const Review = styled.p`
+export const Text = styled.p`
   font-family: "Lora";
   font-weight: 400;
   font-size: 15px;
   line-height: 1.4;
   margin-top: 10px;
+
+  &::first-letter {
+    text-transform: capitalize;
+  }
 
   color: #000000;
 
@@ -152,6 +156,25 @@ export const Review = styled.p`
   }
   @media ${device.laptop} {
     font-size: 20px;
-    margin-top: 35px;
+    font-size: 35px;
+  }
+`;
+
+export const Review = styled.p`
+  font-family: "Lora";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.4;
+  margin-top: 8px;
+
+  color: #000000;
+
+  @media ${device.tablet} {
+    font-size: 16px;
+    margin-top: 13px;
+  }
+  @media ${device.laptop} {
+    font-size: 20px;
+    margin-top: 20px;
   }
 `;

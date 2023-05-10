@@ -22,24 +22,44 @@ export const AimContainer = styled.div`
 
 export const ExtraContainer = styled.div`
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  height: 290px;
 
-  // @media ${device.tablet} {
-  //   justify-content: space-between;
-  // }
+  @media ${device.mobileTablet} {
+    justify-content: space-between;
+  }
+  @media ${device.tablet} {
+    height: 470px;
+  }
+  @media ${device.laptop} {
+    height: 637px;
+  }
 `;
 
 export const TextContainer = styled.div`
   width: 140px;
+  position: absolute;
+  top: 11px;
+  left: 5px;
+
+  @media screen and (min-width: 380px) {
+    transform: translateX(10px);
+  }
+
+  @media screen and (min-width: 425px) {
+    transform: translateX(40px);
+  }
 
   @media ${device.mobileTablet} {
     width: 155px;
+    position: static;
   }
   @media ${device.tablet} {
     width: 270px;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     width: 450px;
   }
 `;

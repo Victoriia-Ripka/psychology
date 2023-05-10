@@ -14,10 +14,13 @@ export const Section = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
   flex-grow: 1;
+
   @media ${device.mobileTablet} {
-    width: 480px;
+    width: auto;
+    max-width: 670px;
+    height: 380px;
+    background-image: url(${background_tablet});
   }
 
   @media ${device.tablet} {
@@ -40,7 +43,8 @@ export const Container = styled.section`
   margin: 0 auto;
 
   @media ${device.mobileTablet} {
-    padding: 120px 22px;
+    padding: 50px 22px;
+    height: 100%;
   }
 
   @media ${device.tablet} {
@@ -58,6 +62,12 @@ export const HeroContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+ @media ${device.mobileTablet} {
+    width: 445px;
+    margin: 0 auto;
+    height: 90%;
+  }
 
   @media ${device.tablet} {
     width: 490px;
@@ -77,6 +87,12 @@ export const HeroContainer = styled.div`
 `;
 
 export const TextContainer = styled.div`
+@media ${device.mobileTablet} {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
   @media ${device.tablet} {
     display: flex;
     flex-direction: column;
@@ -101,7 +117,7 @@ export const Title = styled.h1`
   }
 
   @media ${device.laptop} {
-    width: 700px;
+    width: 620px;
     font-size: 50px;
   }
 `;
@@ -158,15 +174,22 @@ export const Button = styled.button`
     font-weight: 700;
   }
 
+  @media ${device.mobileTablet} {
+    position: absolute;
+    font-size: 14px;
+    top: 150px;
+  }
+
   @media ${device.tablet} {
     width: 284px;
     height: 60px;
+    font-size: 16px;
     position: absolute;
-    top: 210px;
+    top: 235px;
   }
 
   @media ${device.laptop} {
-    width: 475px;
+    width: 400px;
     top: 310px;
   }
 `;

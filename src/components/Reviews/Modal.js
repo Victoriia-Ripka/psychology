@@ -10,6 +10,7 @@ import {
   UserInfo,
   Name,
   Country,
+  Text,
   Review,
 } from "./Modal.styled.js";
 import ReviewsArray from "../../data/reviews.json";
@@ -62,6 +63,7 @@ export const Modal = ({ index, open, setOpenModal }) => {
               <Country>{client.country} </Country>
             </UserInfo>
           </Info>
+          <Text>{client.type}</Text>
           <Review>{client.review}</Review>
         </User>
       </ModalDiv>
