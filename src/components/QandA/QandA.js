@@ -1,7 +1,10 @@
 import React from "react";
+import { Container } from "../styles.styled";
 
 const QandA = () => {
-  return <div>Q&A</div>;
+  return <Container>
+    
+  </Container>;
 };
 
 export default QandA;

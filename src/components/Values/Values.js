@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import { Container } from "../styles.styled";
 
 const Values = () => {
-  return (
-    <div>Values</div>
-  )
-}
+  return <Container></Container>;
+};
 
-export default Values
+export default Values;
