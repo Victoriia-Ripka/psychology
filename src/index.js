@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <BrowserRouter basename="/psychology">
+      <BrowserRouter basename="/helpful-brigadeiros-8dd6e5.netlify.app">
         <App />
       </BrowserRouter>
     </ThemeProvider>
