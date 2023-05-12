@@ -37,7 +37,7 @@ const Aim = () => {
               </List>
             </TextContainer>
             <ImgContainer>
-              <Img src={image} alt="white flowers and notes" />
+              <Img src={image} alt="white flowers and notes" loading="lazy" />
             </ImgContainer>
           </ExtraContainer>
           <Text>

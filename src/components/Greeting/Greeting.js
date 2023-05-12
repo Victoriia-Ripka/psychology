@@ -15,7 +15,7 @@ const Greeting = () => {
       <Container>
         <GreetingContainer>
           <ImgContainer>
-            <Img src={image} alt="white flowers and notes" />
+            <Img src={image} alt="white flowers and notes" loading="lazy"/>
           </ImgContainer>
           <TextContainer>
             <Text>

@@ -83,7 +83,9 @@ const Reviews = () => {
             );
           })}
           <NextButton id="next" onClick={getNext}>
-            <MdArrowForwardIos size={25} />
+            <IconContext.Provider value={{ size: "auto" }}>
+              <MdArrowForwardIos />
+            </IconContext.Provider>
           </NextButton>
         </Slides>
       </ReviewsContainer>
